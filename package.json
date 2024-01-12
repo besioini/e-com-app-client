@@ -1,0 +1,23 @@
+{
+  "name": "e-com-app-client",
+  "version": "1.0.0",
+  "description": "Client side for an e-com MVP app for the sake of learning vanilla javascript",
+  "scripts": {
+    "start": "nodemon --watch './pages/*.html' --watch './pages/*.js' --exec 'node ./utils/openLogin.js'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/besioini/e-com-app-client.git"
+  },
+  "author": "Brahim Sioini",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/besioini/e-com-app-client/issues"
+  },
+  "homepage": "https://github.com/besioini/e-com-app-client#readme",
+  "devDependencies": {
+    "nodemon": "^3.0.2",
+    "open": "^8.2.1"
+  }
+}

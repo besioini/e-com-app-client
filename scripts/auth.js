@@ -1,4 +1,9 @@
-
+/*
+    Event listners: loginForm, registerForm & logout
+    Register to hit baseURL/users/register route 
+    Login to hit baseURL/users/login route
+    logout to clear local storage tokens
+*/
 document.addEventListener('DOMContentLoaded', () => {
     const loginForm = document.getElementById('loginForm');
     const registerForm = document.getElementById('registerForm');
@@ -7,30 +12,28 @@ document.addEventListener('DOMContentLoaded', () => {
     if (loginForm) {
         loginForm.addEventListener('submit', login);
     }
-
     if (registerForm) {
         registerForm.addEventListener('submit', register);
     }
-    
     if (logoutButton) {
         logoutButton.addEventListener('click', logout);
         console.log('Cliked');
     }
 });
 
-const URL = 'http://localhost:5000/api/users/';
+const baseURL = 'http://localhost:5000/api';
 
 const register = async(event) => {
     event.preventDefault();
-    const userName = document.getElementById('register-username').value;
+    const username = document.getElementById('register-username').value;
     const email = document.getElementById('register-email').value;
     const password = document.getElementById('register-password').value;
 
     try {
-        const response = await fetch(`${URL}register`, {
+        const response = await fetch(`${baseURL}/users/register`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ userName, email, password })
+            body: JSON.stringify({ username, email, password })
         });
 
         const data = await response.json();
@@ -41,7 +44,7 @@ const register = async(event) => {
             console.error('Registration failed:', data.message);
         }
     } catch (error) {
-        console.error('Error during registration:', error);
+        console.error('Error during registration:', error.message);
     }
 }
 
@@ -51,7 +54,7 @@ const login = async (event) => {
     const password = document.getElementById('login-password').value;
 
     try {
-        const response = await fetch(`${URL}login`, {
+        const response = await fetch(`${baseURL}/users/login`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ email, password })
@@ -59,27 +62,22 @@ const login = async (event) => {
 
         const data = await response.json();
         if (response.ok) {
-            // Login successful, store the token and redirect
             localStorage.setItem('authToken', data.token);
             console.log("Redirecting to index.html");
             window.location.href = '../pages/index.html';
             console.log(data);
         } else {
-            // Handle errors (e.g., display error messages)
             console.error('Login failed:', data.message);
         }
     } catch (error) {
-        console.error('Error during login:', error);
+        console.error('Error during login:', error.message);
     }
 }
 
 
 const logout = (e) => {
     e.preventDefault();
-    // Clear the authentication token or flag
     localStorage.removeItem('authToken');
-
-    // Redirect to login page
     window.location.href = '../pages/login.html';
 }
 

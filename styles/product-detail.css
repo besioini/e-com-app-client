@@ -1,0 +1,23 @@
+.product-detail {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.product-detail .image-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Wrap images if they don't fit in one line */
+    gap: 10px; /* Space between images */
+}
+
+.product-detail img {
+    width: 200px;
+    width: 200px;
+    height: auto;
+    border-radius: 3px;
+    margin:5px;
+}

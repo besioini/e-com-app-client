@@ -17,7 +17,6 @@ body {
     --secondary-color: #A9A9A9;
 }
 
-/* Header */
 header {
     background-color: var(--primary-color);
     color: white;
@@ -25,7 +24,6 @@ header {
     padding: 1rem 0;
 }
 
-/* Navigation Menu */
 nav ul {
     list-style: none;
     padding: 0;
@@ -41,12 +39,10 @@ nav a {
     text-decoration: none;
 }
 
-/* Main Content */
 main {
     padding: 20px;
 }
 
-/* Footer */
 footer {
     background-color: var(--secondary-color);
     color: white;
@@ -57,7 +53,6 @@ footer {
     width: 100%;
 }
 
-/* Buttons */
 button {
     background-color: var(--primary-color);
     color: white;
@@ -72,7 +67,6 @@ button:hover {
     background-color: var(--secondary-color);
 }
 
-/* Forms */
 input, select {
     width: 100%;
     padding: 10px;
@@ -81,7 +75,6 @@ input, select {
     border-radius: 4px;
 }
 
-/* Utility Classes */
 .container {
     width: 90%;
     margin: auto;

@@ -1,9 +1,7 @@
 
-const productsURL = 'http://localhost:5000/api/products';
-
 const fetchProducts = async() => {
     try {
-        const response = await fetch(productsURL);
+        const response = await fetch(`${baseURL}/products/getAllProducts`);
         const products = await response.json();
         displayProducts(products);
     } catch (error) {
@@ -19,17 +17,17 @@ function displayProducts(products) {
         productElement.innerHTML = `
             <h4>${product.name}</h4>
             <p>${product.description}</p>
-            <p id='price'>$${product.price}</p>
-            <!-- Add more product details here -->
+            <p class='price'>$${product.price}</p>
+            <img src="${product.imageUrl[0]}" style="width:150px; height:150px;">
         `;
         productsContainer.appendChild(productElement);
+        productElement.addEventListener('click', () => navigate(product._id));
     });
-
-    productsContainer.addEventListener('click', navigate)  
 }
 
-const navigate = () => {
-    window.location.href = '../pages/product-detail.html';
+const navigate = (productId) => {
+    window.location.href = `../pages/product-detail.html?productId=${productId}`;
 }
+
 
 document.addEventListener('DOMContentLoaded', fetchProducts);
