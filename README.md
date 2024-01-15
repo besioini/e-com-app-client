@@ -15,7 +15,7 @@ Phase 2: Transition to React
 In the final weeks of the bootcamp, the client-side codebase will be transitioned from Vanilla JavaScript to React. This shift is aimed at enhancing my React and Redux skills.
 
 ## Repository Structure
-Two Separate Repositories: Initially, the project will have two separate repositories:
+Initially, the project will have two separate repositories:
 
 Client Repository: For the frontend development.
 
@@ -26,7 +26,9 @@ Unified Repository Post-transition: After the transition to React, the project w
 ## Installation and Setup Instructions
 ### Cloning the Repositories
 Clone both the client and server repositories from GitHub.
+
 client: https://github.com/besioini/market-pulse-client
+
 server: https://github.com/besioini/market-pulse-server
 ### Dependency Installation
 Navigate to each repo directory in two separate terminals and run:
