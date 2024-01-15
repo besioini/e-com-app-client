@@ -25,7 +25,7 @@
     font-size: 0.9em;
 }
 
-/* .product-card button {
+.product-card button {
     background-color: var(--primary-color);
     color: white;
     border: none;
@@ -33,7 +33,7 @@
     margin-top: 10px;
     border-radius: 4px;
     cursor: pointer;
-} */
+}
 
 .product-card:hover {
     background-color: var(--secondary-color);
@@ -41,10 +41,17 @@
 }
 
 
-#productsContainer {
+#products-container {
     display: flex;
 }
 
-.price {
+#price {
     color:red
+}
+
+#search-products {}
+.container {
+    width: 90%;
+    margin: auto;
+    max-width: 1200px;
 }

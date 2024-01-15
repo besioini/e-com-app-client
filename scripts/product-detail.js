@@ -2,7 +2,6 @@
     fetch product details
 */
 
-const baseURL = 'http://localhost:5000/api';
 
 document.addEventListener('DOMContentLoaded', () => {
     const urlParams = new URLSearchParams(window.location.search);
@@ -15,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const fetchProductDetails = async (productId) => {
     try {
-        const url = `${baseURL}/products/getProduct/${productId}`;
+        const url = `http://localhost:5000/api/products/getProduct/${productId}`;
         console.log(`Fetching from URL: ${url}`);
         const response = await fetch(url);
         if (response.ok) {
@@ -47,14 +46,21 @@ function displayProductDetails(product) {
     }
 
     productDetailElement.innerHTML = `
-        <h2>Seller${product.seller}</h2>
         <h2>${product.name}</h2>
         <p>${product.description}</p>
         <p>${product.quantity} items left</p>
         ${imagesHtml}
         <p>Price: $${product.price}</p>
+        <input type="number" id="product-quantity" placeholder="Add quantity">
         <button id="addToCart">Add to cart</button>
     `;
 
     container.appendChild(productDetailElement);
+    
+    const addToCartButton = document.getElementById('addToCart');
+    if (addToCartButton) {
+        addToCartButton.addEventListener('click', () => {
+            addToCart(product._id);
+        });
+    }
 }

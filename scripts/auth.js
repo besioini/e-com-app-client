@@ -3,6 +3,15 @@
     Register to hit baseURL/users/register route 
     Login to hit baseURL/users/login route
     logout to clear local storage tokens
+
+    
+    note: 
+    review (data.success) if API res form:
+        res.status(200).json({
+            success: true,
+            message: "Operation successful",
+            token: "some-auth-token"
+        });
 */
 document.addEventListener('DOMContentLoaded', () => {
     const loginForm = document.getElementById('loginForm');
@@ -10,27 +19,32 @@ document.addEventListener('DOMContentLoaded', () => {
     const logoutButton = document.getElementById('logout');
 
     if (loginForm) {
-        loginForm.addEventListener('submit', login);
+        loginForm.addEventListener('submit', function(event){
+            event.preventDefault();
+            login();
+        });
     }
     if (registerForm) {
-        registerForm.addEventListener('submit', register);
+        registerForm.addEventListener('submit', function(event){
+            event.preventDefault();
+            register();
+        });
     }
     if (logoutButton) {
-        logoutButton.addEventListener('click', logout);
-        console.log('Cliked');
+        logoutButton.addEventListener('click', function(event){
+            event.preventDefault();
+            logout();
+        });
     }
 });
 
-const baseURL = 'http://localhost:5000/api';
-
-const register = async(event) => {
-    event.preventDefault();
+const register = async() => {
     const username = document.getElementById('register-username').value;
     const email = document.getElementById('register-email').value;
     const password = document.getElementById('register-password').value;
 
     try {
-        const response = await fetch(`${baseURL}/users/register`, {
+        const response = await fetch(`http://localhost:5000/api/users/register`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ username, email, password })
@@ -48,13 +62,12 @@ const register = async(event) => {
     }
 }
 
-const login = async (event) => {
-    event.preventDefault();
+const login = async () => {
     const email = document.getElementById('login-email').value;
     const password = document.getElementById('login-password').value;
 
     try {
-        const response = await fetch(`${baseURL}/users/login`, {
+        const response = await fetch(`http://localhost:5000/api/users/login`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ email, password })
@@ -74,20 +87,8 @@ const login = async (event) => {
     }
 }
 
-
-const logout = (e) => {
-    e.preventDefault();
+const logout = () => {
     localStorage.removeItem('authToken');
     window.location.href = '../pages/login.html';
 }
 
-
-//note: 
-// I can also use if (data.success) if API res form:
-
-//res.status(200).json({
-//     success: true,
-//     message: "Operation successful",
-//     token: "some-auth-token", // Optional, depending on the operation
-//     // ... other data ...
-// });

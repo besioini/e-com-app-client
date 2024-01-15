@@ -13,7 +13,7 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="./cart.html">Cart</a></li>
+                <li><a href="cart.html" id="cart-link">Cart</a></li>
                 <li><a href="profile.html">Profile</a></li>
                 <li><a href="./seller-dashboard.html">Sell</a></li>
                 <li><a href="#" id="logout">Logout</a></li>
@@ -22,17 +22,25 @@
     </header>
 
     <main>
+
+        <!-- <div id="welcome">
+            <h2>Welcome</h2>
+        </div> -->
+        <div id="search-products">
+            <input type="text" name="search" placeholder="Search">
+        </div>
         <div class="container">
-            <h1>Welcome</h1>
-            <div id="productsContainer"></div>
+            <div id="products-container"></div>
         </div>
     </main>
 
     <footer>
         <p>&copy; 2024 E-commerce Store. All rights reserved.</p>
     </footer>
-
+    
     <script src="../scripts/auth.js"></script>
+    <script src="../scripts/cart.js"></script>
+    <script src="../scripts/product-detail.js"></script>
     <script src="../scripts/products.js"></script>
 </body>
 </html>
