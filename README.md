@@ -1,5 +1,5 @@
 
-# MERN MArketPulse Learning Project
+# MERN Marketpulse Learning Project
 
 ## Overview
 This MERN (MongoDB, Express.js, JavaScript, React, Node.js) stack application is a tiny e-com application, designed as a learning project during for PerScholas bootcamp program to enhance my software engineering skills by addressing various full-stack development challenges. It was chosen specifically to encounter and solve common software development problems in a practical context.
@@ -16,8 +16,11 @@ In the final weeks of the bootcamp, the client-side codebase will be transitione
 
 ## Repository Structure
 Two Separate Repositories: Initially, the project will have two separate repositories:
-Client Repository: For the frontend development. 
+
+Client Repository: For the frontend development.
+
 Server Repository: For the backend development.
+
 Unified Repository Post-transition: After the transition to React, the project will be consolidated into a single repository hosting both the server and client codebases, preparing it for deployment.
 
 ## Installation and Setup Instructions
