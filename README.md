@@ -1,15 +1,16 @@
 
 # MERN MArketPulse Learning Project
 
-## Project Overview
+## Overview
 This MERN (MongoDB, Express.js, JavaScript, React, Node.js) stack application is a tiny e-com application, designed as a learning project during for PerScholas bootcamp program to enhance my software engineering skills by addressing various full-stack development challenges. It was chosen specifically to encounter and solve common software development problems in a practical context.
 
-## Goals and StructureDevelopemnt Process
+## Goals, Structure & Developemnt Process
 Building a project that cumulatively encompasses various aspects of software engineering, from database management to frontend development.
 The development process is organized in a workflow approach that incrementally builds both the client and server sides. The client-side part of this project is divided into two main phases:
 
-Phase 1: Vanilla JavaScript Implementation
+Phase 1: Vanilla JavaScript Implementation 
 Initially, the application's functionalities are implemented using Vanilla JavaScript.
+
 Phase 2: Transition to React
 In the final weeks of the bootcamp, the client-side codebase will be transitioned from Vanilla JavaScript to React. This shift is aimed at enhancing my React and Redux skills.
 
