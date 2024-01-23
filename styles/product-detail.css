@@ -1,5 +1,5 @@
 .product-detail {
-    background-color: #ffffff;
+    background-color: white;
     padding: 20px;
     margin: 15px;
     border-radius: 8px;
@@ -9,15 +9,20 @@
 
 .product-detail .image-container {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap; /* Wrap images if they don't fit in one line */
-    gap: 10px; /* Space between images */
+    justify-content: center;
+    /* flex-wrap: wrap;
+    gap: 10px; */
 }
 
 .product-detail img {
-    width: 200px;
-    width: 200px;
-    height: auto;
+    width: 150px;
+    height: 15px;
     border-radius: 3px;
-    margin:5px;
+    margin: 5px;
+}
+
+@media (max-width: 768px) {
+    .product-detail .image-container {
+        flex-direction: column;
+    }
 }

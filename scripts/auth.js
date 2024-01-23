@@ -42,12 +42,13 @@ const register = async() => {
     const username = document.getElementById('register-username').value;
     const email = document.getElementById('register-email').value;
     const password = document.getElementById('register-password').value;
+    const type = document.getElementById('register-type').value;
 
     try {
         const response = await fetch(`http://localhost:5000/api/users/register`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ username, email, password })
+            body: JSON.stringify({ username, email, password, type })
         });
 
         const data = await response.json();
@@ -76,9 +77,14 @@ const login = async () => {
         const data = await response.json();
         if (response.ok) {
             localStorage.setItem('authToken', data.token);
-            console.log("Redirecting to index.html");
-            window.location.href = '../pages/index.html';
-            console.log(data);
+
+            if (data.userType === 'seller') {
+                console.log("Redirecting to seller portal");
+                window.location.href = '../pages/seller/home.html';
+            } else {
+                console.log("Redirecting to buyer portal");
+                window.location.href = '../pages/buyer/index.html';
+            }
         } else {
             console.error('Login failed:', data.message);
         }
@@ -87,8 +93,9 @@ const login = async () => {
     }
 }
 
+
 const logout = () => {
     localStorage.removeItem('authToken');
-    window.location.href = '../pages/login.html';
+    window.location.href = '../../pages/login.html';
 }
 

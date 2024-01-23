@@ -18,7 +18,7 @@ function displayProducts(products) {
             <h4>${product.name}</h4>
             <p>${product.description}</p>
             <p id="price">$${product.price}</p>
-            <img src="${product.imageUrl[0]}" style="width:150px; height:150px;">
+            <img src="${product.imageUrl[0]}">
         `;
         productsContainer.appendChild(productElement);
         productElement.addEventListener('click', () => navigate(product._id));
@@ -26,8 +26,9 @@ function displayProducts(products) {
 }
 
 const navigate = (productId) => {
-    window.location.href = `../pages/product-detail.html?productId=${productId}`;
+    window.location.href = `../../pages/buyer/product-details.html?productId=${productId}`;
 }
 
 
 document.addEventListener('DOMContentLoaded', fetchProducts);
+

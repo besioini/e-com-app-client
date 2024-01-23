@@ -2,7 +2,6 @@
     fetch product details
 */
 
-
 document.addEventListener('DOMContentLoaded', () => {
     const urlParams = new URLSearchParams(window.location.search);
     const productId = urlParams.get('productId');
@@ -64,3 +63,4 @@ function displayProductDetails(product) {
         });
     }
 }
+

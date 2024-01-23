@@ -1,8 +1,8 @@
 /*
     review re.params and re.query
-
     addToCart and getCart functions 
 */
+
 document.addEventListener('DOMContentLoaded', () => {
     const cartLink = document.getElementById('cart-link');
     if (cartLink) {
@@ -14,11 +14,11 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 const addToCart = async (productId) => {
+    const quantity = parseInt(document.getElementById('product-quantity').value);
+    console.log(quantity);
+    const token = localStorage.getItem('authToken');
+    const userId = getUserId(token);
     try {
-        const quantity = parseInt(document.getElementById('product-quantity').value);
-        console.log(quantity);
-        const token = localStorage.getItem('authToken');
-        const userId = getUserIdFromToken(token);
         const response = await fetch(`http://localhost:5000/api/cart/addToCart`, {
             method: 'POST',
             headers: {
@@ -29,7 +29,8 @@ const addToCart = async (productId) => {
         });
         if (response.ok) {
             alert('Product added to cart');
-            window.location.href = '../pages/cart.html';
+            window.location.href = '../../pages/buyer/cart.html';
+            // I need to update cart state on home page, so user can click it
         } else {
             alert('Failed adding product to cart');
         }
@@ -48,7 +49,7 @@ const getCart = async () => {
             return;
         }
 
-        const userId = getUserIdFromToken(token);
+        const userId = getUserId(token);
         if (!userId) {
             console.error('Unable to retrieve user ID from token');
             return;
@@ -63,7 +64,9 @@ const getCart = async () => {
 
         if (response.ok) {
             const cart = await response.json();
-            displayCartItems(cart.items);
+            const cartItems = cart.items;
+            console.log('Cart data:', cartItems); 
+            displayCartItems(cartItems);
         } else {
             console.error("Failed to fetch cart items");
             alert("Failed to fetch cart items");
@@ -85,28 +88,13 @@ const displayCartItems = (cartItems) => {
         itemElement.innerHTML = `
             <div class="cart-item-info">
                 <h3>${product.name}</h3>
-                <p>Quantity: ${item.quantity}</p>
-                <p>Price: $${product.price}</p>
+                <p>Quantity:${item.quantity}</p>
+                <p>Price: $${product.price * item.quantity}</p>
             </div>
             <div class="cart-item-actions">
-                <button class="remove-item">Remove</button>
             </div>
         `;
 
         cartContainer.appendChild(itemElement);
     });
 };
-
-function getUserIdFromToken(token) {
-    try {
-        const base64Url = token.split('.')[1];
-        const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
-        const jsonPayload = decodeURIComponent(atob(base64).split('').map(function(c) {
-            return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
-        }).join(''));
-        return JSON.parse(jsonPayload).userId; 
-    } catch (e) {
-        console.error('Error decoding token:', e);
-        return null;
-    }
-}

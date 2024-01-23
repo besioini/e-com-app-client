@@ -9,11 +9,15 @@
 </head>
 <body>
     <div class="container">
-        <h1>Create an Account</h1>
+        <h1>Create Account</h1>
         <form id="registerForm">
             <input type="text" id="register-username" placeholder="Username" required>
             <input type="email" id="register-email" placeholder="Email" required>
             <input type="password" id="register-password" placeholder="Password" required>
+            <select id="register-type" required>
+                <option value="regular">Regular</option>
+                <option value="seller">Seller</option>
+            </select>
             <button type="submit">Register</button>
             <p>Already have an account? <a href="login.html">Login 
         </form>
