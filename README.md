@@ -2,7 +2,11 @@
 # MERN Marketpulse Learning Project
 
 ## Overview
+<<<<<<< HEAD
 This MERN (MongoDB, Express.js, JavaScript, React, Node.js) stack application is a tiny e-com application, designed as a learning project during for PerScholas bootcamp program to enhance my software engineering skills by addressing various full-stack development challenges. It was chosen specifically to encounter and solve common software development problems in a practical context.
+=======
+This MERN stack application is a tiny store application, designed as a learning project during PerScholas bootcamp program to enhance my software engineering skills by addressing various full-stack development challenges. It was chosen specifically to encounter and solve common software development problems in a practical context.
+>>>>>>> e1a9452 (Added update & remove cart functionality and some styling changes)
 
 ## Goals, Structure & Developemnt Process
 Building a project that cumulatively encompasses various aspects of software engineering, from database management to frontend development.
@@ -42,7 +46,11 @@ This command will install all necessary dependencies for each part of the projec
 - Ensure you have the latest version of Node.js installed.
 - Navigate to the server directory and run:
 ```bash
+<<<<<<< HEAD
 npm run dev
+=======
+nodemon server.js
+>>>>>>> e1a9452 (Added update & remove cart functionality and some styling changes)
 ```
 This will start the Express server.
 
@@ -69,9 +77,16 @@ This will launch the client-side application.
 - **Product Browsing and Search**: Users can browse, search, and filter products.
 - **Shopping Cart Management**: Adding products to the cart, modifying quantities, and saving items for later.
 - **Checkout Process**: Including shipping information entry, payment processing, and order review.
+<<<<<<< HEAD
 - **Order Confirmation and Tracking**: Users receive detailed confirmation and can track their orders.
 - **User Account Management**: Profile updates, password changes, and order history viewing.
 - **Seller Interface**: For product listing and order management 
 - **Responsive Design**: Ensuring a seamless user experience across various devices.
 
 
+=======
+- **User Account Management**: Profile updates, password changes, and order history viewing.
+- **Seller Interface**: For product listing and order management 
+- **Responsive Design**: Ensuring a seamless user experience across various devices.
+- **Order Confirmation and Tracking (Stretching Goal)**: Users receive detailed confirmation and can track their orders . 
+>>>>>>> e1a9452 (Added update & remove cart functionality and some styling changes)

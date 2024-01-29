@@ -46,25 +46,12 @@ function displayProductDetails(product) {
 
     productDetailElement.innerHTML = `
         <h2>${product.name}</h2>
-        <p>${product.description}</p>
-        <p>${product.quantity} items left</p>
+        <p>${product.quantity} items posted for sale</p>
         ${imagesHtml}
         <p>Price: $${product.price}</p>
-<<<<<<< HEAD
-        <input type="number" id="product-quantity" placeholder="Add quantity">
-=======
-        <input type="number" id="product-quantity" placeholder="Add quantity" required>
->>>>>>> e1a9452 (Added update & remove cart functionality and some styling changes)
-        <button id="addToCart">Add to cart</button>
+        <button>Update</button>
     `;
 
     container.appendChild(productDetailElement);
     
-    const addToCartButton = document.getElementById('addToCart');
-    if (addToCartButton) {
-        addToCartButton.addEventListener('click', () => {
-            addToCart(product._id);
-        });
-    }
 }
-

@@ -50,6 +50,7 @@ const displayProducts = (products) => {
         productElement.className = 'product-card';
         productElement.innerHTML = `
             <h3>${product.name}</h3>
+<<<<<<< HEAD
             <p>${product.description}</p>
             <p>$${product.price}</p>
             <img src="${product.imageUrl[0]}" style="width:150px; height:150px;">
@@ -57,3 +58,24 @@ const displayProducts = (products) => {
         productList.appendChild(productElement);
     });
 };
+=======
+            <p id="price">$${product.price}</p>
+            <img src="${product.imageUrl[0]}" style="width:150px; height:150px;">
+            <h6>Stock Quantity: ${product.quantity}</h6>
+        `;
+        productList.appendChild(productElement);
+        productList.addEventListener('click', () => navigate(product._id));
+    });
+};
+
+const navigate = (productId) => {
+    window.location.href = `../../pages/seller/product-details.html?productId=${productId}`;
+}
+
+const postProduct = document.getElementById('post-product');
+postProduct.addEventListener('click', () => {
+    window.location.href = '../../pages/seller/post-product.html';
+})
+
+document.addEventListener('DOMContentLoaded', fetchProducts);
+>>>>>>> e1a9452 (Added update & remove cart functionality and some styling changes)

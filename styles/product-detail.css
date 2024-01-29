@@ -13,7 +13,14 @@
     /* flex-wrap: wrap;
     gap: 10px; */
 }
+<<<<<<< HEAD
 
+=======
+#product-quantity {
+    width: fit-content;
+    background-color: whitesmoke;
+}
+>>>>>>> e1a9452 (Added update & remove cart functionality and some styling changes)
 .product-detail img {
     width: 150px;
     height: 15px;

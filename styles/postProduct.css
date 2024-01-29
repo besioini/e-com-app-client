@@ -31,6 +31,20 @@
     background-color: var(--secondary-color);
 }
 
+<<<<<<< HEAD
+=======
+#post-product {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    text-align: center ;
+}
+
+>>>>>>> e1a9452 (Added update & remove cart functionality and some styling changes)
 @media (max-width: 768px) {
     .container {
         padding: 10px;

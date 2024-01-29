@@ -4,7 +4,10 @@
     Login to hit baseURL/users/login route
     logout to clear local storage tokens
 
+<<<<<<< HEAD
     
+=======
+>>>>>>> e1a9452 (Added update & remove cart functionality and some styling changes)
     note: 
     review (data.success) if API res form:
         res.status(200).json({
@@ -39,6 +42,11 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 const register = async() => {
+<<<<<<< HEAD
+=======
+    const firstname = document.getElementById('register-firstname').value;
+    const lastname = document.getElementById('register-lastname').value;
+>>>>>>> e1a9452 (Added update & remove cart functionality and some styling changes)
     const username = document.getElementById('register-username').value;
     const email = document.getElementById('register-email').value;
     const password = document.getElementById('register-password').value;
@@ -48,7 +56,11 @@ const register = async() => {
         const response = await fetch(`http://localhost:5000/api/users/register`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
+<<<<<<< HEAD
             body: JSON.stringify({ username, email, password, type })
+=======
+            body: JSON.stringify({ firstname, lastname, username, email, password, type })
+>>>>>>> e1a9452 (Added update & remove cart functionality and some styling changes)
         });
 
         const data = await response.json();
@@ -86,10 +98,19 @@ const login = async () => {
                 window.location.href = '../pages/buyer/index.html';
             }
         } else {
+<<<<<<< HEAD
             console.error('Login failed:', data.message);
         }
     } catch (error) {
         console.error('Error during login:', error.message);
+=======
+            alert('Login failed');
+            console.error('Login failed:', data.message);
+        }
+    } catch (error) {
+        alert('Server error')
+        console.error('Server error:', error.message);
+>>>>>>> e1a9452 (Added update & remove cart functionality and some styling changes)
     }
 }
 
