@@ -50,11 +50,7 @@ function displayProductDetails(product) {
         <p>${product.quantity} items left</p>
         ${imagesHtml}
         <p>Price: $${product.price}</p>
-<<<<<<< HEAD
-        <input type="number" id="product-quantity" placeholder="Add quantity">
-=======
         <input type="number" id="product-quantity" placeholder="Add quantity" required>
->>>>>>> e1a9452 (Added update & remove cart functionality and some styling changes)
         <button id="addToCart">Add to cart</button>
     `;
 

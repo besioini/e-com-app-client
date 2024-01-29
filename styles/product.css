@@ -1,10 +1,6 @@
 
 .product-card {
-<<<<<<< HEAD
-    background-color: wite;
-=======
     background-color: white;
->>>>>>> e1a9452 (Added update & remove cart functionality and some styling changes)
     border: 1px solid #dddddd;
     border-radius: 8px;
     padding: 20px;
@@ -15,11 +11,7 @@
 }
 
 .product-card img {
-<<<<<<< HEAD
-    max-width: 150px;
-=======
     max-width: fit-content;
->>>>>>> e1a9452 (Added update & remove cart functionality and some styling changes)
     height: 150px;
     border-radius: 5px; 
 }
@@ -44,11 +36,7 @@
 }
 
 .product-card:hover {
-<<<<<<< HEAD
-    background-color: cadetblue;
-=======
     background-color: var(--secondary-color);
->>>>>>> e1a9452 (Added update & remove cart functionality and some styling changes)
     cursor: pointer;
 }
 

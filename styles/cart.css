@@ -5,23 +5,16 @@
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-<<<<<<< HEAD
-=======
 .cart-checkout {
     text-align: center;
 }
 
->>>>>>> e1a9452 (Added update & remove cart functionality and some styling changes)
 .cart-item {
     border-bottom: 1px solid #dddddd;
     padding: 10px 0;
 }
 
-<<<<<<< HEAD
-.cart-item:last-child {
-=======
 /* .cart-item:last-child {
->>>>>>> e1a9452 (Added update & remove cart functionality and some styling changes)
     border-bottom: none;
 }
 
@@ -31,19 +24,6 @@
 
 .cart-item-actions {
     text-align: right;
-<<<<<<< HEAD
-}
-
-#checkout {
-    width: 100%;
-    padding: 10px;
-    margin-top: 20px;
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-=======
 } */
 
 #cart-checkout {
@@ -55,7 +35,6 @@
     border: none;
     border-radius: 4px;
     /* cursor: pointer; */
->>>>>>> e1a9452 (Added update & remove cart functionality and some styling changes)
 }
 
 #checkout:hover {

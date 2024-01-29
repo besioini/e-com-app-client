@@ -1,10 +1,6 @@
 
 /*
-<<<<<<< HEAD
-    100% of this function copied and pasted
-=======
     100% of this function is copied and pasted
->>>>>>> e1a9452 (Added update & remove cart functionality and some styling changes)
 */
 
 const getUserId = (token) => {

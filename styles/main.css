@@ -5,35 +5,20 @@
     box-sizing: border-box;
 }
 
-<<<<<<< HEAD
-=======
 :root {
     --primary-color: steelblue;
     --secondary-color: lightgray;
 }
 
->>>>>>> e1a9452 (Added update & remove cart functionality and some styling changes)
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     color: #333333;
-<<<<<<< HEAD
-    background-color: #FAFAFA;
-}
-
-:root {
-    --primary-color: cadetBlue;
-    --secondary-color: lightgray;
-}
-
-header {
-=======
     background-color: whitesmoke;
 }
 
 header {
     /* position: fixed; */
->>>>>>> e1a9452 (Added update & remove cart functionality and some styling changes)
     background-color: var(--primary-color);
     color: white;
     text-align: center;
@@ -58,11 +43,6 @@ nav a {
     text-decoration: none;
 }
 
-<<<<<<< HEAD
-/* nav a:hover {
-    background-color: #4b7f7a;
-} */
-=======
 a {
     text-decoration: none;
 }
@@ -70,7 +50,6 @@ a {
 a:hover {
     text-decoration: underline;
 }
->>>>>>> e1a9452 (Added update & remove cart functionality and some styling changes)
 
 main {
     padding: 20px;
@@ -89,11 +68,7 @@ button {
 }
 
 button:hover {
-<<<<<<< HEAD
-    background-color: #4b7f7a;
-=======
     background-color: var(--secondary-color);
->>>>>>> e1a9452 (Added update & remove cart functionality and some styling changes)
 }
 
 input, select {
@@ -104,26 +79,6 @@ input, select {
     border-radius: 5px;
 }
 
-<<<<<<< HEAD
-.hidden {
-    display: none;
-}
-
-a {
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-footer {
-    background-color: cadetblue;
-    color: white;
-    text-align: center;
-    padding: 1rem 0;
-    position: relative;
-=======
 /* .hidden {
     display: none;
 } */
@@ -134,7 +89,6 @@ footer {
     text-align: center;
     padding: 1rem 0;
     position: fixed;
->>>>>>> e1a9452 (Added update & remove cart functionality and some styling changes)
     bottom: 0;
     width: 100%;
 }

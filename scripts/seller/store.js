@@ -50,15 +50,6 @@ const displayProducts = (products) => {
         productElement.className = 'product-card';
         productElement.innerHTML = `
             <h3>${product.name}</h3>
-<<<<<<< HEAD
-            <p>${product.description}</p>
-            <p>$${product.price}</p>
-            <img src="${product.imageUrl[0]}" style="width:150px; height:150px;">
-        `;
-        productList.appendChild(productElement);
-    });
-};
-=======
             <p id="price">$${product.price}</p>
             <img src="${product.imageUrl[0]}" style="width:150px; height:150px;">
             <h6>Stock Quantity: ${product.quantity}</h6>
@@ -78,4 +69,3 @@ postProduct.addEventListener('click', () => {
 })
 
 document.addEventListener('DOMContentLoaded', fetchProducts);
->>>>>>> e1a9452 (Added update & remove cart functionality and some styling changes)
