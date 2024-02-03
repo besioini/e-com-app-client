@@ -49,9 +49,49 @@ function displayProductDetails(product) {
         <p>${product.quantity} items posted for sale</p>
         ${imagesHtml}
         <p>Price: $${product.price}</p>
-        <button>Update</button>
+        <button id="update-product">Update</button>
+        <button id="remove-product">Remove</button>
     `;
 
     container.appendChild(productDetailElement);
+
+    const removeButton = document.getElementById('remove-product');
+    if (removeButton) {
+        removeButton.addEventListener('click', function(event) {
+            const confirmed = confirm('Are you sure you want to remove this product?');
+            if (confirmed) {
+                removeProduct(product._id);
+            }
+        });
+    }
     
+    const updateButton = document.getElementById('update-product');
+    if (updateButton) {
+        updateButton.addEventListener('click', function(event) {
+            window.location.href = `../../pages/seller/update-product.html?productId=${product._id}`;
+        });
+    }
 }
+
+const removeProduct = async (productId) => {
+    const token = localStorage.getItem('authToken');
+    
+    try {
+        const response = await fetch(`http://localhost:5000/api/products/removeProduct/${productId}`, {
+            method: 'DELETE',
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        });
+
+        if (response.ok) {
+            alert('Product removed successfully');
+            window.location.href = '../../pages/seller/store.html';
+        } else {
+            alert('Failed to remove product');
+        }
+    } catch (error) {
+        console.error('Error removing product:', error);
+        alert('Error removing product');
+    }
+};

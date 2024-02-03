@@ -7,8 +7,8 @@
     margin: auto;
 }
 
-#add-product-form input, 
-#add-product-form textarea, 
+#add-product-form input,
+#add-product-form textarea,
 #add-product-form select {
     width: 100%;
     margin-bottom: 15px;

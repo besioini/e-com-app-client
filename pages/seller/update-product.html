@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MarketPulse Seller Dashboard</title>
+    <title>Update Product</title>
     <link rel="stylesheet" href="../../styles/main.css">
-    <link rel="stylesheet" href="../../styles/seller.css">
-    <link rel="stylesheet" href="../../styles/post-product.css">
+    <link rel="stylesheet" href="../../styles/update-product.css">
 </head>
 <body>
     <header>
@@ -22,11 +21,11 @@
 
     <main>
         <div class="container">
-            <form id="add-product-form">
-                <input type="text" id="product-name" placeholder="Product Name" required>
-                <textarea id="product-description" placeholder="Product Description" required></textarea>
-                <input type="number" id="product-price" placeholder="Price" required>
-                <select id="product-category" required>
+            <form id="update-product-form">
+                <input type="text" id="product-name" name="name" placeholder="Product Name">
+                <textarea id="product-description" name="description" placeholder="Product Description"></textarea>
+                <input type="number" id="product-price" name="price" placeholder="Price">
+                <select id="product-category" name="category">
                     <option value="" disabled selected>Select Category</option>
                     <option value="Electronics">Electronics</option>
                     <option value="Clothes">Clothes</option>
@@ -34,9 +33,9 @@
                     <option value="Home">Home</option>
                     <option value="Sports">Sports</option>
                 </select>
-                <input type="number" id="product-quantity" placeholder="Quantity" required>
-                <input type="text" id="product-image-url" placeholder="Image URL" required>
-                <button type="submit">Add Product</button>
+                <input type="number" id="product-quantity" name="quantity" placeholder="Quantity">
+                <input type="text" id="product-image-url" name="imageUrl" placeholder="Image URL">
+                <button type="submit">Update</button>
             </form>
         </div>
     </main>
@@ -47,10 +46,6 @@
 
     <script src="../../scripts/auth.js"></script>
     <script src="../../utils/userId.js"></script>
-    <script src="../../scripts/seller/store.js"></script>
-    <script src="../../scripts/seller/post-product.js"></script>
-
+    <script src="../../scripts/seller/update-product.js"></script>
 </body>
 </html>
-
-

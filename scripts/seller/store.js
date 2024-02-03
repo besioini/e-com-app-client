@@ -54,8 +54,8 @@ const displayProducts = (products) => {
             <img src="${product.imageUrl[0]}" style="width:150px; height:150px;">
             <h6>Stock Quantity: ${product.quantity}</h6>
         `;
+        productElement.addEventListener('click', () => navigate(product._id));
         productList.appendChild(productElement);
-        productList.addEventListener('click', () => navigate(product._id));
     });
 };
 

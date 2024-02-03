@@ -72,7 +72,7 @@ const displayCartItems = (cartItems) => {
         const checkoutElement = document.createElement('div');
 
         itemElement.className = 'cart-item';
-        checkoutElement.className = 'cart-checkout';
+        // checkoutElement.className = 'cart-checkout';
 
         itemElement.innerHTML = `
             <div class="cart-item-info">
@@ -86,7 +86,7 @@ const displayCartItems = (cartItems) => {
         checkoutElement.innerHTML = `<button>Checkout</button>`;
         
         cartContainer.appendChild(itemElement);
-        cartCheckout.appendChild(checkoutElement);
+        // cartCheckout.appendChild(checkoutElement);
 
         itemElement.querySelector('.remove-btn').addEventListener('click', () => removeFromCart(product._id));
         itemElement.querySelector('.update-btn').addEventListener('click', function() {
