@@ -5,28 +5,13 @@
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-#cart-checkout {
-    text-align: center;
-}
-
 .cart-item {
     border-bottom: 1px solid #dddddd;
     padding: 10px 0;
 }
 
-/* .cart-item:last-child {
-    border-bottom: none;
-}
-
-.cart-item-info {
-    margin-bottom: 10px;
-}
-
-.cart-item-actions {
-    text-align: right;
-} */
-
 #cart-checkout {
+    text-align: center;
     width: 100%;
     padding: 10px;
     margin-top: 20px;
